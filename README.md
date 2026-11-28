@@ -9,4 +9,4 @@ Plain HTML, CSS and JavaScript. No build step.
 
 ## Publish with GitHub Pages
 
-Name this repository `tarun03k.github.io`, then in Settings > Pages choose "Deploy from a branch", branch `main`, folder `/ (root)`. The site appears at https://tarun03k.github.io.
+Name this repository `tarun05k08.github.io`, then in Settings > Pages choose "Deploy from a branch", branch `main`, folder `/ (root)`. The site appears at https://tarun05k08.github.io.
