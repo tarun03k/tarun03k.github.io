@@ -179,6 +179,38 @@ th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
 .contact a{font-weight:700;overflow-wrap:anywhere}
 footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px solid var(--line)}
 
+
+.st{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.02em;border-radius:6px;padding:1px 7px;margin-left:4px;color:var(--ink);vertical-align:1px;font-style:normal}
+.st.real{border:1.5px solid var(--ink)}
+.st.trial{border:1.5px dotted var(--ink)}
+.st.target{border:1.5px dashed var(--ink2);color:var(--ink2)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:-8px 0 22px;font-size:.92rem;color:var(--ink2)}
+.legend b:first-child{color:var(--ink);font-family:var(--font-display)}
+.tile-m{margin-top:12px;font-size:.82rem;color:var(--ink2)}
+.tile-m span{margin-left:4px}
+.scale-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.scale-row div{border-left:4px solid var(--line);padding-left:12px}
+.scale-row strong{display:block;font-family:var(--font-display);font-size:1.25rem;line-height:1.15;font-weight:800}
+.scale-row span{display:block;font-size:.88rem;color:var(--ink2);margin-top:4px}
+.role-line{background:var(--bg);border-radius:10px;padding:10px 12px;font-size:.95rem}
+.role-line b{color:var(--ink)}
+.cs{background:var(--card);border-radius:18px;box-shadow:var(--shadow);border-top:8px solid var(--c);padding:24px 26px;margin-bottom:16px}
+.cs .k{font-size:.8rem;font-weight:700;letter-spacing:.03em;color:var(--ink2);display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.cs .k i{width:10px;height:10px;border-radius:3px;background:var(--c);display:inline-block}
+.cs h3{font-size:1.45rem}
+.cs-sum{color:var(--ink2);margin-top:8px;max-width:70ch}
+.cs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 30px;margin:18px 0 6px}
+.cs-grid dt,.tech dt{font-weight:700;font-size:.78rem;letter-spacing:.04em;color:var(--ink2);text-transform:uppercase}
+.cs-grid dd,.tech dd{margin:4px 0 0}
+.cs-grid ul{margin:0;padding-left:18px}
+.cs-grid li{margin:3px 0}
+.cs .chips{margin-top:14px}
+.tech{border-top:6px solid var(--c)}
+.tech dl{display:grid;gap:12px;margin:12px 0 0}
+.plain{margin:10px 0 0;padding-left:18px;color:var(--ink2)}
+.plain li{margin:5px 0}
+@media (max-width:900px){.scale-row{grid-template-columns:repeat(2,1fr)}.cs-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.scale-row{grid-template-columns:1fr}}
 #tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--bg);padding:7px 11px;border-radius:8px;font-size:.85rem;font-weight:600;max-width:260px;box-shadow:0 6px 20px rgba(0,0,0,.25);display:none}
 
 @media (max-width:900px){
@@ -212,8 +244,9 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
         <li><a href="#impact">Impact</a></li>
         <li><a href="#work">Programmes</a></li>
         <li><a href="#cases">Case studies</a></li>
+        <li><a href="#tech">Technology</a></li>
+        <li><a href="#lead">Leadership</a></li>
         <li><a href="#path">Career</a></li>
-        <li><a href="#beyond">Beyond work</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><button class="toggle" id="theme" type="button" aria-label="Switch between light and dark">Light / Dark</button></li>
       </ul>
@@ -254,11 +287,17 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       <h2>The value, in numbers</h2>
       <p>Outcomes from programmes I led. Hover any bar for the detail. Each colour is one programme and keeps that colour through the page.</p>
     </div>
+    <div class="legend" role="note" aria-label="How to read the numbers">
+      <b>How to read the numbers</b>
+      <span><b class="st real">Realised</b> a measured result.</span>
+      <span><b class="st trial">Trial</b> a result from a trial, not the full rollout.</span>
+      <span><b class="st target">Target</b> the planned outcome, not yet claimed as achieved.</span>
+    </div>
 
     <div class="dash">
       <div class="panel p-ring">
         <h3>Developer adoption</h3>
-        <div class="sub">GenAI coding assistant, after a three-phase rollout</div>
+        <div class="sub">GenAI coding assistant, after a three-phase rollout <b class="st real">Realised</b></div>
         <div class="ring-wrap">
           <svg class="ring" viewBox="0 0 150 150" role="img" aria-label="95 percent adoption">
             <circle class="track" cx="75" cy="75" r="54" fill="none" stroke-width="16"></circle>
@@ -267,7 +306,7 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           </svg>
           <div class="ring-list">
             <div><b>25%</b> higher PR throughput</div>
-            <div><b>~6 hrs</b> saved per developer per week</div>
+            <div><b>~6 hrs</b> saved per developer per week, from the quarterly developer survey</div>
           </div>
         </div>
       </div>
@@ -289,10 +328,25 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
         </details>
       </div>
 
-      <div class="panel p-tile" style="--c:var(--s1)"><div class="tile-k"><i></i>AI for SDLC</div><div class="tile-v">30%</div><div class="tile-l">lower cloud model cost from request routing</div></div>
-      <div class="panel p-tile" style="--c:var(--s2)"><div class="tile-k"><i></i>Retail</div><div class="tile-v">25%</div><div class="tile-l">more colleague time for operational tasks in trials</div></div>
-      <div class="panel p-tile" style="--c:var(--s4)"><div class="tile-k"><i></i>Data and AI</div><div class="tile-v">30%</div><div class="tile-l">revenue growth from LLM-enabled products</div></div>
-      <div class="panel p-tile" style="--c:var(--s5)"><div class="tile-k"><i></i>Enterprise PMO</div><div class="tile-v">$5M</div><div class="tile-l">savings from automating 8+ financial workflows</div></div>
+      <div class="panel p-tile" style="--c:var(--s1)"><div class="tile-k"><i></i>AI for SDLC</div><div class="tile-v">40%</div><div class="tile-l">less time spent on programme reporting, using AI agents</div><div class="tile-m"><b class="st real">Realised</b> <span>Tesco programme, 2024 to now</span></div></div>
+      <div class="panel p-tile" style="--c:var(--s2)"><div class="tile-k"><i></i>Retail</div><div class="tile-v">25%</div><div class="tile-l">more colleague availability for store tasks</div><div class="tile-m"><b class="st trial">Trial</b> <span>Store trials before rollout</span></div></div>
+      <div class="panel p-tile" style="--c:var(--s4)"><div class="tile-k"><i></i>Data and AI</div><div class="tile-v">30%</div><div class="tile-l">revenue growth from commercialising AI/ML products, with 20% faster time to market</div><div class="tile-m"><b class="st real">Realised</b> <span>Wolters Kluwer, 2021 to 2024</span></div></div>
+      <div class="panel p-tile" style="--c:var(--s5)"><div class="tile-k"><i></i>Enterprise PMO</div><div class="tile-v">$5M</div><div class="tile-l">savings from automating 8+ financial workflows with ML</div><div class="tile-m"><b class="st real">Realised</b> <span>TietoEVRY, 2015 to 2021</span></div></div>
+      
+      
+      
+
+      <div class="panel p-wide">
+        <h3>Scale at a glance</h3>
+        <div class="sub">What I run day to day, shown as ranges</div>
+        <div class="scale-row">
+          <div><strong>10 to 25</strong><span>people in the teams I lead</span></div>
+          <div><strong>3</strong><span>programmes run in parallel</span></div>
+          <div><strong>Single-digit to tens of £M</strong><span>portfolio value under my budget ownership</span></div>
+          <div><strong>Thousands</strong><span>of developers reached by the AI programme</span></div>
+          <div><strong>UK and Central Europe</strong><span>store footprint of the retail programme</span></div>
+        </div>
+      </div>
 
       <div class="panel p-wide">
         <h3>Career timeline</h3>
@@ -326,7 +380,6 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       </div>
     </div>
   </section>
-
   <section id="work">
     <div class="sec-head">
       <div class="eyebrow"><i style="--c:var(--s2)"></i>Programmes</div>
@@ -347,16 +400,18 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>GENAI AND AGENTIC ENGINEERING</span>
           <h3>AI for the software development lifecycle</h3>
           <p>Rolled out an on-prem GenAI coding assistant to thousands of developers in three gated phases, then added multi-model orchestration, AI pull-request review and agentic tooling.</p>
+          <p class="role-line"><b>My role.</b> I own the OKRs, roadmap and executive reporting. I set the guardrails and evaluation criteria for each AI release, forecast and allocate team capacity, and run the vendor and commercial negotiations.</p>
           <ul>
             <li>Release gates for security, privacy and output quality</li>
-            <li>An agent harness that routes requests to cut cloud model cost</li>
+            <li>An agent harness that routes requests across models to control cost</li>
             <li>AI agents that automate RAID logs and status reports</li>
           </ul>
           <div class="chips">
-            <span class="chip"><i></i>95% adoption</span>
-            <span class="chip"><i></i>25% PR throughput</span>
-            <span class="chip"><i></i>30% lower model cost</span>
-            <span class="chip"><i></i>40% less reporting time</span>
+            <span class="chip"><i></i>95% adoption <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>25% PR throughput <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>~6 hrs saved per dev per week (survey) <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>40% less reporting time <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>~30% lower model cost <b class="st target">Target</b></span>
           </div>
         </div>
       </article>
@@ -366,14 +421,15 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>RETAIL TRANSFORMATION</span>
           <h3>AI-powered store replenishment</h3>
           <p>Led a cross-functional team delivering demand-led replenishment for store colleagues: wearable devices, data science optimisers and store operations on one roadmap, with readiness gates from trial to MVP to rollout.</p>
+          <p class="role-line"><b>My role.</b> I own the roadmap, dependencies, risks, capacity plan, financials and benefits tracking. I secured senior approval to bring device and trial funding forward by a year.</p>
           <ul>
             <li>Hardware and software integration over Wi-Fi, BLE, REST and MDM</li>
-            <li>Device and trial funding brought forward by a year with senior approval</li>
-            <li>Targeting a 50% cut in inventory waste</li>
+            <li>Technology, Product, UX, Infrastructure, Data Science and Store Operations aligned on one plan</li>
           </ul>
           <div class="chips">
-            <span class="chip"><i></i>10% colleague productivity</span>
-            <span class="chip"><i></i>25% more colleague availability</span>
+            <span class="chip"><i></i>10% colleague productivity <b class="st trial">Trial</b></span>
+            <span class="chip"><i></i>25% more colleague availability <b class="st trial">Trial</b></span>
+            <span class="chip"><i></i>50% less inventory waste <b class="st target">Target</b></span>
           </div>
         </div>
       </article>
@@ -383,14 +439,15 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>PLATFORM ENGINEERING</span>
           <h3>Developer platform modernisation</h3>
           <p>Moved mission-critical Tier-0 and Tier-1 platforms to OpenShift, replaced static CI runners with auto-scaling ones, and put software supply-chain governance across thousands of repositories.</p>
+          <p class="role-line"><b>My role.</b> I own the roadmap, backlog, sprint delivery and capacity plan for the DevOps team, manage the vendors, and agreed with Enterprise Architecture how each platform was validated under production load before cutover.</p>
           <ul>
-            <li>SBOM and licence compliance from proof of concept to MVP on 16K+ repos</li>
+            <li>SBOM and licence compliance taken from proof of concept to MVP on 16K+ repos</li>
             <li>About 500 pipelines moved to dynamic runners</li>
-            <li>Tooling held at 99.9% availability</li>
           </ul>
           <div class="chips">
-            <span class="chip"><i></i>Job wait 4 hrs to 1 hr</span>
-            <span class="chip"><i></i>25% less operational overhead</span>
+            <span class="chip"><i></i>Job wait 4 hrs to 1 hr <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>25% less operational overhead <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>99.9% availability held <b class="st real">Realised</b></span>
           </div>
         </div>
       </article>
@@ -400,14 +457,15 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>DATA SCIENCE AND AI</span>
           <h3>LLM products and an enterprise RAG chatbot</h3>
           <p>At Wolters Kluwer I took GPT-based and Azure Cognitive Services products from discovery to global deployment, and delivered DevBot, an internal chatbot grounded in company knowledge with retrieval-augmented generation and a vector database.</p>
+          <p class="role-line"><b>My role.</b> I led delivery from discovery to global deployment and kept Engineering, UX, Product and Sales aligned. I ran the DevSecOps rollout with Security and Legal.</p>
           <ul>
             <li>Automated ETL and Power BI reporting for Finance on Azure Databricks</li>
             <li>DevSecOps scanning rolled out with Security and Legal</li>
           </ul>
           <div class="chips">
-            <span class="chip"><i></i>20% faster time to market</span>
-            <span class="chip"><i></i>30% revenue growth</span>
-            <span class="chip"><i></i>50% shorter reporting cycles</span>
+            <span class="chip"><i></i>20% faster time to market <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>30% revenue growth <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>50% shorter reporting cycles <b class="st real">Realised</b></span>
           </div>
         </div>
       </article>
@@ -417,15 +475,16 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>ENTERPRISE PMO</span>
           <h3>ERP portfolio, resilience and GDPR</h3>
           <p>At TietoEVRY I managed an ERP-integrated portfolio across SAP, Oracle and Dynamics 365, led disaster-recovery readiness for 100+ critical applications, and ran GDPR remediation across 150+ solutions.</p>
+          <p class="role-line"><b>My role.</b> I was project and programme manager, and Scrum Master on the automation work, partnering with Engineering, Finance, Legal and the business.</p>
           <ul>
             <li>8+ financial workflows automated with ML models</li>
             <li>25+ product launches under one Agile model</li>
           </ul>
           <div class="chips">
             <span class="chip"><i></i>€5M portfolio</span>
-            <span class="chip"><i></i>$5M savings</span>
-            <span class="chip"><i></i>Availability 90% to 98%</span>
-            <span class="chip"><i></i>Penalties €20M to €5M</span>
+            <span class="chip"><i></i>$5M savings <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>Availability 90% to 98% <b class="st real">Realised</b></span>
+            <span class="chip"><i></i>Penalties €20M to €5M <b class="st real">Realised</b></span>
           </div>
         </div>
       </article>
@@ -435,25 +494,79 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
           <span class="k"><i></i>DIGITAL PRODUCT DELIVERY</span>
           <h3>Digital roadmap and go-to-market at Sears</h3>
           <p>At Sears Holdings India I worked with Product, Engineering, Sales and Marketing to define the digital product roadmap and deliver it, lining up multi-million-dollar budget allocations with go-to-market readiness.</p>
+          <p class="role-line"><b>My role.</b> I worked with Product, Engineering, Sales and Marketing to set the roadmap, and tied budget allocation to launch readiness for each launch.</p>
           <ul>
             <li>One roadmap shared by Product, Engineering, Sales and Marketing</li>
-            <li>Budget allocation tied to launch readiness</li>
             <li>Launches delivered on time</li>
           </ul>
           <div class="chips">
-            <span class="chip"><i></i>On-time launches</span>
             <span class="chip"><i></i>Multi-million-dollar budgets</span>
+            <span class="chip"><i></i>On-time launches</span>
           </div>
         </div>
       </article>
     </div>
   </section>
-
   <section id="cases">
     <div class="sec-head">
-      <div class="eyebrow"><i style="--c:var(--s3)"></i>Product thinking</div>
-      <h2>Product case studies</h2>
-      <p>Four written case studies from my move toward AI product work. Each states the problem, the options weighed and the decision.</p>
+      <div class="eyebrow"><i style="--c:var(--s3)"></i>Featured case studies</div>
+      <h2>Three programmes in depth</h2>
+      <p>Each one covers the context, what I was accountable for, the decisions I drove, how it was executed, and the outcome. Status labels show which numbers are realised, trial or target.</p>
+    </div>
+    <article class="cs" style="--c:var(--s1)">
+      <span class="k"><i></i>CASE STUDY 1 · AI AND GENAI</span>
+      <h3>Bringing GenAI into the software lifecycle</h3>
+      <p class="cs-sum">A large engineering organisation needed AI coding tools it could trust on security, privacy and cost.</p>
+      <dl class="cs-grid">
+        <div><dt>Context</dt><dd>Roll out a GenAI coding assistant and agentic tooling to thousands of developers without weakening engineering controls.</dd></div>
+        <div><dt>My accountability</dt><dd>OKRs, roadmap and executive reporting for a team of about 15. Guardrails and evaluation criteria for every AI release, capacity allocation, and vendor and commercial negotiations.</dd></div>
+        <div><dt>Key decisions</dt><dd><ul><li>Host the assistant on-prem.</li><li>Release in three phases, each with training, adoption governance and readiness checks.</li><li>Gate AI releases on security, privacy and output quality, using Snyk, SonarQube and Sonatype Firewall.</li><li>Add LiteLLM and OpenCode, and an in-house agent harness, for multi-model access and cost-aware routing.</li></ul></dd></div>
+        <div><dt>Execution</dt><dd>Phased rollout to IntelliJ and VS Code users, then agents, MCP integrations, AI pull-request review, Golden Repos and Skills for non-development teams. AI agents took over RAID logs and status reporting.</dd></div>
+      </dl>
+      <div class="chips">
+        <span class="chip"><i></i>95% adoption <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>25% PR throughput <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>~6 hrs saved per dev per week (survey) <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>40% less reporting time <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>~30% lower model cost <b class="st target">Target</b></span>
+      </div>
+    </article>
+    <article class="cs" style="--c:var(--s2)">
+      <span class="k"><i></i>CASE STUDY 2 · RETAIL TRANSFORMATION</span>
+      <h3>Demand-led replenishment for store colleagues</h3>
+      <p class="cs-sum">Stores needed better shelf availability and colleagues needed guidance in the moment, not after the fact.</p>
+      <dl class="cs-grid">
+        <div><dt>Context</dt><dd>Use AI-driven inventory management and dynamic replenishment to raise shelf availability and free colleague time for operational work.</dd></div>
+        <div><dt>My accountability</dt><dd>Roadmap, dependencies, risks, capacity plan, financials and benefits tracking for a cross-functional team of about 25 across Technology, Product, UX, Infrastructure, Data Science and Store Operations.</dd></div>
+        <div><dt>Key decisions</dt><dd><ul><li>Run four replenishment capabilities on one demand-led approach.</li><li>Move through readiness gates from trial to MVP to rollout.</li><li>Bring device and trial funding forward by a year, with senior approval.</li></ul></dd></div>
+        <div><dt>Execution</dt><dd>Integrated wearable hardware with software over Wi-Fi, BLE, REST APIs, cloud services and MDM, then ran store trials and an MVP before rollout.</dd></div>
+      </dl>
+      <div class="chips">
+        <span class="chip"><i></i>10% colleague productivity <b class="st trial">Trial</b></span>
+        <span class="chip"><i></i>25% more colleague availability <b class="st trial">Trial</b></span>
+        <span class="chip"><i></i>50% less inventory waste <b class="st target">Target</b></span>
+      </div>
+    </article>
+    <article class="cs" style="--c:var(--s3)">
+      <span class="k"><i></i>CASE STUDY 3 · PLATFORM ENGINEERING</span>
+      <h3>Keeping developer tooling fast, safe and available</h3>
+      <p class="cs-sum">Developer platforms had to stay reliable and compliant while costing less to run.</p>
+      <dl class="cs-grid">
+        <div><dt>Context</dt><dd>Keep SDLC tooling at 99.9% availability, meet licence and security compliance, and cut the effort spent running the tools.</dd></div>
+        <div><dt>My accountability</dt><dd>Product roadmap, backlog, sprint delivery, capacity plan and vendor management for a DevOps team of about 10.</dd></div>
+        <div><dt>Key decisions</dt><dd><ul><li>Validate each Tier-0 and Tier-1 platform with Enterprise Architecture under production load before cutover to OpenShift.</li><li>Replace static CI runners with auto-scaling ones through an MVP, infrastructure work and Alpha and Beta trials.</li><li>Take SBOM and licence scanning from proof of concept to MVP.</li></ul></dd></div>
+        <div><dt>Execution</dt><dd>Moved about 500 pipelines to dynamic runners, and put real-time scanning on 16K+ repositories to flag malicious npm dependencies and components needing licence approval.</dd></div>
+      </dl>
+      <div class="chips">
+        <span class="chip"><i></i>Job wait 4 hrs to 1 hr <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>25% less operational overhead <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>Fewer security incidents, less patching effort <b class="st real">Realised</b></span>
+        <span class="chip"><i></i>99.9% availability held <b class="st real">Realised</b></span>
+      </div>
+    </article>
+    <div class="sec-head" style="margin-top:34px">
+      <h3>Written product case studies</h3>
+      <p>Four product exercises from my move toward AI product work.</p>
     </div>
     <div class="cases">
       <div class="case" style="--c:var(--s1)"><div class="num">01</div><b>GenAI developer tooling</b><span>Evaluating an AI coding assistant for an engineering organisation.</span></div>
@@ -462,7 +575,108 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       <div class="case" style="--c:var(--s5)"><div class="num">04</div><b>AI pull-request review agent</b><span>Defining how to evaluate a review agent before release.</span></div>
     </div>
   </section>
-
+  <section id="tech">
+    <div class="sec-head">
+      <div class="eyebrow"><i style="--c:var(--s1)"></i>Technology decisions</div>
+      <h2>Technology decisions I have driven</h2>
+      <p>Six choices I helped make with engineering and architecture teams, and what each one achieved.</p>
+    </div>
+    <div class="grid">
+      <article class="panel tech" style="--c:var(--s1)">
+        <h3>Multi-model orchestration and routing</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Reliable access to several AI models, with cloud spend under control.</dd></div>
+          <div><dt>Approach</dt><dd>LiteLLM and OpenCode, plus an in-house agent harness built for the engineering environment, routing each request automatically.</dd></div>
+          <div><dt>Result</dt><dd>Models stay available and reliable, and routing is designed to bring Azure cost down by about 30% (target).</dd></div>
+        </dl>
+      </article>
+      <article class="panel tech" style="--c:var(--s4)">
+        <h3>Enterprise RAG and knowledge retrieval</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Answers from company knowledge, not from a model guessing.</dd></div>
+          <div><dt>Approach</dt><dd>DevBot on Azure Cognitive Services, using retrieval-augmented generation over a vector database.</dd></div>
+          <div><dt>Result</dt><dd>An internal chatbot grounded in enterprise knowledge, taken from concept to deployment.</dd></div>
+        </dl>
+      </article>
+      <article class="panel tech" style="--c:var(--s1)">
+        <h3>AI coding assistant security controls</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Use AI in the codebase without exposing code or lowering quality.</dd></div>
+          <div><dt>Approach</dt><dd>On-prem hosting, with Snyk, SonarQube and Sonatype Firewall gates on every AI release.</dd></div>
+          <div><dt>Result</dt><dd>Rollout in three gated phases to 95% adoption.</dd></div>
+        </dl>
+      </article>
+      <article class="panel tech" style="--c:var(--s3)">
+        <h3>Dynamic CI runner architecture</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Pipelines were waiting hours for static runners.</dd></div>
+          <div><dt>Approach</dt><dd>Auto-scaling runners on Red Hat OpenShift, proven in MVP, infrastructure work and Alpha and Beta trials before about 500 pipelines moved.</dd></div>
+          <div><dt>Result</dt><dd>Average job wait fell from 4 hours to 1, with fewer security incidents and less patching.</dd></div>
+        </dl>
+      </article>
+      <article class="panel tech" style="--c:var(--s3)">
+        <h3>Software supply-chain governance</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Know what is in the code and block risky components early.</dd></div>
+          <div><dt>Approach</dt><dd>SBOM and software composition analysis with Flexera and Snyk, plus real-time scanning for malicious npm dependencies and licence approvals.</dd></div>
+          <div><dt>Result</dt><dd>Taken from proof of concept to MVP across 16K+ repositories.</dd></div>
+        </dl>
+      </article>
+      <article class="panel tech" style="--c:var(--s2)">
+        <h3>Hardware and software integration for retail</h3>
+        <dl>
+          <div><dt>Need</dt><dd>Real-time replenishment guidance on a device in a colleague's hand.</dd></div>
+          <div><dt>Approach</dt><dd>Wi-Fi, BLE, REST APIs, cloud services and MDM, released through trial, MVP and rollout gates.</dd></div>
+          <div><dt>Result</dt><dd>Trial results of 10% more colleague productivity and 25% more availability for operational tasks (trial).</dd></div>
+        </dl>
+      </article>
+    </div>
+  </section>
+  <section id="lead">
+    <div class="sec-head">
+      <div class="eyebrow"><i style="--c:var(--s2)"></i>Leadership and governance</div>
+      <h2>How I lead and govern</h2>
+      <p>Teams, executives, money and risk. This is the part of the job that sits around the delivery plan.</p>
+    </div>
+    <div class="grid">
+      <article class="panel" style="border-top:6px solid var(--s1)">
+        <h3>Teams and organisational change</h3>
+        <ul class="plain">
+          <li>I lead teams of about 10 to 25 people.</li>
+          <li>I coach engineers and product owners through objectives and capability plans.</li>
+          <li>I turned developer experience study findings into a prioritised backlog.</li>
+          <li>I build adoption through training and governance at every rollout phase.</li>
+        </ul>
+      </article>
+      <article class="panel" style="border-top:6px solid var(--s2)">
+        <h3>Executive stakeholders</h3>
+        <ul class="plain">
+          <li>I run steering committees and programme boards with C-suite stakeholders.</li>
+          <li>I report OKRs and programme health to executives.</li>
+          <li>I align Finance, Legal, Security, Sales and Product on one plan.</li>
+          <li>I secured senior approval to bring retail funding forward by a year.</li>
+        </ul>
+      </article>
+      <article class="panel" style="border-top:6px solid var(--s3)">
+        <h3>Financial and commercial ownership</h3>
+        <ul class="plain">
+          <li>I own portfolio budgets and align CAPEX and OPEX with Finance.</li>
+          <li>I build business cases and track benefits.</li>
+          <li>I run RFI and RFP processes and negotiate with vendors and procurement.</li>
+          <li>I forecast and allocate capacity against value, readiness, risk and dependencies.</li>
+        </ul>
+      </article>
+      <article class="panel" style="border-top:6px solid var(--s5)">
+        <h3>Risk, quality and responsible AI</h3>
+        <ul class="plain">
+          <li>I manage RAID and set release readiness gates.</li>
+          <li>I set evaluation criteria for AI output quality, security and privacy.</li>
+          <li>I run software supply-chain and licence compliance.</li>
+          <li>I have led GDPR remediation across 150+ solutions.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
   <section id="path">
     <div class="sec-head">
       <div class="eyebrow"><i style="--c:var(--s4)"></i>Career</div>
@@ -475,9 +689,9 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       <div class="panel"><h3>Earlier roles</h3><div class="sub" style="margin:2px 0 8px">2007 to 2015</div><p style="color:var(--ink2)">Sears Holdings India, digital project manager. Amdocs, PMO. Jones Lang LaSalle, consultant. Before IT, I was a chef.</p></div>
     </div>
     <div class="skills">
-      <div class="panel"><h3>Programme leadership</h3><p>Portfolio management, roadmaps and OKRs, Agile, SAFe and Scrum, RAID, capacity planning, benefits realisation, steering committees, vendor and commercial negotiation.</p></div>
-      <div class="panel"><h3>AI delivery and governance</h3><p>AI product lifecycle, release readiness gates, responsible AI and evaluation, RAG architectures, SBOM and supply-chain governance, GDPR.</p></div>
-      <div class="panel"><h3>Tools</h3><p>Jira, Azure DevOps, Confluence, Miro, Power BI, GitHub, GitLab, Snyk, SonarQube, Nexus, Tabnine, GitHub Copilot, M365 Copilot, LiteLLM, OpenShift, Azure.</p></div>
+      <div class="panel"><h3>Strategic</h3><p>Portfolio management, roadmaps and OKRs, benefits realisation, financial and commercial governance, vendor negotiation, executive communication.</p></div>
+      <div class="panel"><h3>Technical</h3><p>AI and GenAI, RAG architectures, multi-model orchestration, cloud (Azure, OpenShift), CI/CD, SBOM and supply-chain security. Tools: Jira, Azure DevOps, Confluence, Miro, Power BI, GitHub, GitLab, Snyk, SonarQube, Nexus, Tabnine, GitHub Copilot, M365 Copilot, LiteLLM.</p></div>
+      <div class="panel"><h3>Delivery</h3><p>Agile, SAFe and Scrum, RAID, capacity planning, release readiness gates, responsible AI evaluation, GDPR, steering committees.</p></div>
     </div>
     <div class="creds" aria-label="Credentials">
       <span class="chip" style="--c:var(--s1)"><i></i>IPMA CPM</span>
@@ -489,7 +703,6 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       <span class="chip" style="--c:var(--s2)"><i></i>BBA Retail, SMU Pune</span>
     </div>
   </section>
-
   <section id="beyond">
     <div class="sec-head">
       <div class="eyebrow"><i style="--c:var(--s5)"></i>Beyond the programme plan</div>
@@ -509,12 +722,11 @@ footer{padding:28px 0 52px;color:var(--ink2);font-size:.9rem;border-top:1px soli
       </article>
     </div>
   </section>
-
   <section id="contact">
     <div class="sec-head">
       <div class="eyebrow"><i style="--c:var(--s1)"></i>Contact</div>
       <h2>Let's talk</h2>
-      <p>Open to conversations about programme leadership, enterprise AI delivery and coaching.</p>
+      <p>Open to conversations about programme leadership, enterprise AI delivery and coaching. Write to me and I will send my CV.</p>
     </div>
     <div class="contact">
       <div class="panel" style="--c:var(--s1)"><small>Email</small><a href="mailto:tarun.karmakar04@gmail.com">tarun.karmakar04@gmail.com</a></div>
